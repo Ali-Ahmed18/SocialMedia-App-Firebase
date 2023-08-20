@@ -22,12 +22,12 @@
     <!-- ////////////////Modals////////////////////// -->
     
     <!-- ///////////modal for create post//////////// -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="createModal" tabindex="-1"  aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content modalLoader">
          
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Create Post</h1>
+            <h1 class="modal-title fs-5">Create Post</h1>
             <button type="button" class="btn-close" id="closeBtn" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
@@ -154,8 +154,7 @@
               <img class="userPic"
                 src="./admin.png">
             </div>
-            <input style="width: 85;" data-bs-toggle="modal" data-bs-target="#exampleModal" placeholder="What's on your mind, hello?"
-              type="text" class="form-control" disabled>
+            <p  data-bs-toggle="modal" data-bs-target="#createModal" class="form-control m-0" >What's on your mind, hello?</p>
           </div>
           <div class="btnOptions d-flex justify-content-around align-items-center mt-3">
             <button type="button" class="btn btn-warning d-flex align-items-center  gap-2"><i
@@ -180,7 +179,6 @@
       </div>
     </div>
   </div>
-
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

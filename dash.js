@@ -182,7 +182,7 @@ async function createPostForUi(firstName,lastName,time,title,description,id,user
      <div class="search ps-3 " style="width: 100%;">
        <div class="input-group" style="width: 100%;">
          <input type="text" class="form-control" placeholder="Write your comment"
-           aria-label="Example text with button addon" aria-describedby="button-addon1" id="comment">
+           aria-label="Example text with button addon" aria-describedby="button-addon1">
          <button class="btn " type="button" id="button-addon1" style="background-color: #222;"><i
              class="fa-solid fa-paper-plane" style="color: #636363;"></i></button>
        </div>
@@ -230,7 +230,9 @@ onAuthStateChanged(auth, (user) => {
        const q = query(collection(db, "posts"), orderBy("postTime"));
        const querySnapshot = await getDocs(q);
        let userImg = document.querySelectorAll(".userPic")
-       
+       userImg.forEach((elem)=>{
+          elem.src = onlineUser.profilePic
+       })
         document.getElementById("name").innerHTML = `${onlineUser.firstName +" "+onlineUser.lastName}`
         document.getElementById("tag").innerHTML = `${onlineUser.firstName}@`
        querySnapshot.forEach((doc) => {
